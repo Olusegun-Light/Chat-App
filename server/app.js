@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 
-
 const cloudRoutes = require("./routes/cloudinary");
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
@@ -22,6 +21,9 @@ app.use(
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Hello from ChatApp Backend");
+});
 
 // Routes
 app.use("/api/auth", authRoutes);
