@@ -14,8 +14,8 @@ const app = express();
 // Middlewares
 app.use(
   cors({
-    origin: process.env.FRONTEND, // frontend URL
-    credentials: true, // if you're using cookies/sessions
+    origin: "https://chat-app-red-alpha.vercel.app", 
+    credentials: true, 
   })
 );
 
