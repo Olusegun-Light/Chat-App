@@ -115,6 +115,7 @@ exports.updateProfile = catchAsync(async (req, res, next) => {
   if (req.body.avatarImage) {
     updateFields.avatarImage = req.body.avatarImage;
   }
+  console.log("Avatar Image URL:", req.body.avatarImage);
 
   if (username) {
     const usernameExists = await User.findOne({ username });
